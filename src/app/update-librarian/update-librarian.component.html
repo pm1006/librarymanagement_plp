@@ -1,0 +1,45 @@
+<div class="col-md-4 offset-md-4 mt-5 card card-body mt-5">
+    <h4 class="center border-bottom">Update User Form</h4>
+    <div class="alert alert-danger" *ngIf='error'></div>
+    <form #updateLibrarianForm='ngForm' (ngSubmit)="updateLibrarian(updateLibrarianForm)">
+
+        <div class="form-group">
+            <input type="text" name="userId" id="userId" #userId='ngModel' ngModel class="form-control mb-3" required
+               readonly placeholder="Enter the Id..">
+               <div *ngIf="userId.touched && userId.invalid">
+                <p class="alert alert-danger" *ngIf="userId.errors.required">
+                    *this field is required
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="userName" id="userName" #userName='ngModel' ngModel class="form-control mb-3" required
+                placeholder="Enter the name..">
+                <div *ngIf="userName.touched && userName.invalid">
+                    <p class="alert alert-danger" *ngIf="userName.errors.required"> This field is required</p>
+                </div>
+
+        </div>
+        <div class="form-group">
+            <input type="email" name="emailId" id="emailId" #emailId='ngModel' ngModel class="form-control mb-3" required
+                placeholder="Enter the email..">
+                <div *ngIf="email_id.touched && email_id.invalid">
+                    <p class="alert alert-danger" *ngIf="email_id.errors.required"> This field is required</p>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <input type="password" name="password" id="password" #password='ngModel' ngModel class="form-control mb-3" required
+                placeholder="Enter the password...">
+                <div *ngIf="password.touched && password.invalid">
+                    <p class="alert alert-danger" *ngIf="password.errors.required"> This field is required</p>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-primary float-left">Update</button>
+        </div>
+    </form>
+</div>
+

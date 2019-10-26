@@ -7,27 +7,64 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { RegisterStudentComponent } from './register-student/register-student.component';
-import { AdminActivitiesComponent } from './admin-activities/admin-activities.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
+import { RemoveUserComponent } from './remove-user/remove-user.component';
+import { AddBooksComponent } from './add-books/add-books.component';
+import { UpdateBooksComponent } from './update-books/update-books.component';
+import { RemoveBooksComponent } from './remove-books/remove-books.component';
+import { GetIssuedBooksComponent } from './get-issued-books/get-issued-books.component';
+import { RequestBookComponent } from './request-book/request-book.component';
+import { IssueBookComponent } from './issue-book/issue-book.component';
+import { ShowAllUsersComponent } from './show-all-users/show-all-users.component';
+import { ShowAllLibrarianComponent } from './show-all-librarian/show-all-librarian.component';
+import { AddLibrarianComponent } from './add-librarian/add-librarian.component';
+import { UpdateLibrarianComponent } from './update-librarian/update-librarian.component';
+import { RemoveLibrarianComponent } from './remove-librarian/remove-librarian.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent,
     HeaderComponent,
     RegisterStudentComponent,
-    AdminActivitiesComponent
+    UpdateUserComponent,
+    RemoveUserComponent,
+    AddBooksComponent,
+    UpdateBooksComponent,
+    RemoveBooksComponent,
+    GetIssuedBooksComponent,
+    RequestBookComponent,
+    IssueBookComponent,
+    ShowAllUsersComponent,
+    ShowAllLibrarianComponent,
+    AddLibrarianComponent,
+    UpdateLibrarianComponent,
+    RemoveLibrarianComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot([
-      {path:'',component:HomeComponent},
-      {path:'login',component:LoginComponent},
+      {path:'',component:LoginComponent},
+      {path:'register-student',component:RegisterStudentComponent},
+      {path:'update-user',component:UpdateUserComponent},
+      {path:'remove-user',component:RemoveUserComponent},
+      {path:'add-books',component:AddBooksComponent},
+      {path:'update-books',component:UpdateBooksComponent},
+      {path:'remove-books',component:RemoveBooksComponent},
+      {path:'request-book',component:RequestBookComponent},
+      {path:'get-issued-books',component:GetIssuedBooksComponent},
+      {path:'show-all-librarian',component:ShowAllLibrarianComponent},
+      {path:'show-all-users',component:ShowAllUsersComponent},
+      {path:'issue-book',component:IssueBookComponent},
+      {path:'add-librarian',component:AddLibrarianComponent},
+      {path:'update-librarian',component:UpdateLibrarianComponent},
+      {path:'remove-librarian',component:RemoveLibrarianComponent},
     ]),
       ReactiveFormsModule,
       HttpClientModule
